@@ -1,0 +1,2 @@
+class TimeD < ApplicationRecord
+end

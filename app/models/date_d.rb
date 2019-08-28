@@ -1,0 +1,2 @@
+class DateD < ApplicationRecord
+end

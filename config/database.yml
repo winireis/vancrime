@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: development
+  password: development
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: vancrime_development
+
+test:
+  <<: *default
+  database: vancrime_test
+
+production:
+  <<: *default
+  database: vancrime_production
+  username: vancrime
+  password: <%= ENV['VANCRIME_DATABASE_PASSWORD'] %>
